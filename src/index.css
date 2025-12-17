@@ -4,6 +4,7 @@
 
 @layer base {
     body {
+        /* font-sans 是 Tailwind 預設的無襯線字體堆疊 (Inter, system-ui 等) */
         @apply bg-gray-50 text-content-main font-sans;
     }
 }

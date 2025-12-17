@@ -11,7 +11,7 @@ export default function AnimationShowcase() {
         <section className="py-12 px-4 max-w-7xl mx-auto space-y-16">
             <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">動畫效果整理 (Animations)</h2>
 
-            {/* 1. Keyframes: Fade In */}
+            {/* 1. Keyframes: Fade In (使用 Keyframes 定義進場動畫) */}
             <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-content-main flex items-center gap-2">
@@ -19,8 +19,10 @@ export default function AnimationShowcase() {
                     </h3>
                     <p className="text-content-sub">點擊按鈕重新播放進場動畫</p>
                     <div className="p-8 bg-white/50 border border-accent/20 rounded-xl flex flex-col items-center justify-center min-h-[200px] relative overflow-hidden">
+                        {/* 透過 key 屬性強制 React 重新渲染元件，觸發動畫重播 */}
                         <div
                             key={replayFade}
+                            // animate-fadeIn: 對應到 tailwind.config.js 中定義的 animation
                             className="bg-white p-6 rounded-lg shadow-md animate-fadeIn text-center"
                         >
                             <h4 className="font-bold text-lg mb-2 text-content-main">Hello, Animation!</h4>
@@ -37,7 +39,7 @@ export default function AnimationShowcase() {
                     </div>
                 </div>
 
-                {/* 2. Transitions: Underline & Hamburger */}
+                {/* 2. Transitions: Underline & Hamburger (使用 transition 與 transform) */}
                 <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-content-main">
                         2. 過渡與變形 (Transitions & Transforms)
@@ -56,13 +58,14 @@ export default function AnimationShowcase() {
                                         className="relative text-content-main font-medium hover:text-primary transition-colors duration-300 group"
                                     >
                                         {item}
+                                        {/* 底線動畫：初始寬度為 0，Hover 時寬度變為 100% */}
                                         <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                                     </a>
                                 ))}
                             </nav>
                         </div>
 
-                        {/* Hamburger Menu */}
+                        {/* Hamburger Menu (漢堡選單變形) */}
                         <div className="space-y-2 border-t pt-6">
                             <span className="text-sm text-content-sub uppercase font-bold">Hamburger Menu Animation</span>
                             <div className="flex items-center gap-4">

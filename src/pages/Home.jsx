@@ -8,10 +8,10 @@ export default function Home() {
             <div className="max-w-4xl w-full">
                 <div className="text-center mb-16 space-y-4">
                     <h1 className="text-5xl font-bold text-content-main">
-                        前端元件庫 <span className="text-primary">Library</span>
+                        <span className="text-primary">React的東東</span>
                     </h1>
                     <p className="text-xl text-content-sub">
-                        選擇您想瀏覽的主題
+                        Hina
                     </p>
                 </div>
 

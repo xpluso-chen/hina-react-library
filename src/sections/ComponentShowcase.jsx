@@ -12,10 +12,11 @@ export default function ComponentShowcase() {
                 <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">按鈕風格 (Button Styles)</h2>
                 <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 space-y-8">
 
-                    {/* Variants Row */}
+                    {/* 範例：展示不同 Variant (Solid, Outline, Ghost...) */}
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Variants</h3>
                         <div className="flex flex-wrap gap-4 items-center">
+                            {/* 使用 variant prop 切換樣式 */}
                             <Button variant="solid">Primary / Solid</Button>
                             <Button variant="outline">Outline</Button>
                             <Button variant="ghost">Ghost</Button>
@@ -24,10 +25,11 @@ export default function ComponentShowcase() {
                         </div>
                     </div>
 
-                    {/* Sizes Row */}
+                    {/* 範例：展示不同 Size */}
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Sizes</h3>
                         <div className="flex flex-wrap gap-4 items-end">
+                            {/* 使用 size prop 切換大小 */}
                             <Button size="sm">Small</Button>
                             <Button size="md">Medium</Button>
                             <Button size="lg">Large</Button>
