@@ -7,7 +7,7 @@ import { MousePointer, Layout, CreditCard, Send } from 'lucide-react';
 export default function ComponentShowcase() {
     return (
         <section className="py-12 px-4 max-w-7xl mx-auto space-y-16">
-            {/* Buttons Section */}
+            {/* 1. 按鈕展示區塊 */}
             <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">按鈕風格 (Button Styles)</h2>
                 <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 space-y-8">
@@ -56,11 +56,102 @@ export default function ComponentShowcase() {
                 </div>
             </div>
 
-            {/* Cards Section */}
+            {/* 2. 字體展示區塊 */}
+            <div className="space-y-6">
+                <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">字體預覽 (Typography)</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+
+                    {/* 一、常用字體 */}
+                    <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 space-y-6">
+                        <h3 className="text-xl font-bold text-content-main border-b pb-2 mb-4">一、常用字體 (Common)</h3>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">1. 中文 (思源黑體Noto Sans TC)</span>
+                            <div className="font-sans-tc text-content-main text-lg border-l-4 border-accent pl-3 py-1">
+                                不怕的人前面才有路。<br />
+                                <span className="text-base opacity-75">通用性高，適合內文與介面。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">2. 英文 (Roboto)</span>
+                            <div className="font-roboto text-content-main text-lg border-l-4 border-accent pl-3 py-1">
+                                Modern design comes from attention to detail.<br />
+                                <span className="text-base opacity-75">簡潔、幾何感且易讀。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">3. 英文 (Lexend)</span>
+                            <div className="font-lexend text-content-main text-lg border-l-4 border-accent pl-3 py-1">
+                                Designed to reduce visual stress.<br />
+                                <span className="text-base opacity-75">變體寬度，適合閱讀，也適合當範本的示意文字。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 二、特殊字體 */}
+                    <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 space-y-6">
+                        <h3 className="text-xl font-bold text-content-main border-b pb-2 mb-4">二、特殊字體 (Special)</h3>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">1. 中文 (思源宋體Noto Serif TC)</span>
+                            <div className="font-serif-tc text-content-main text-lg border-l-4 border-primary pl-3 py-1 font-normal">
+                                不怕的人前面才有路。<br />
+                                <span className="text-base opacity-75">適合標題、引言或強調人文氣息。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">2. 英文 (Playfair Display)</span>
+                            <div className="font-playfair text-content-main text-xl border-l-4 border-primary pl-3 py-1 italic">
+                                "Elegance is the only beauty that never fades."<br />
+                                <span className="text-base opacity-75 not-italic font-sans">適合奢華感的標題與展示。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">3. 英文 (Oswald)</span>
+                            <div className="font-oswald text-content-main text-xl border-l-4 border-primary pl-3 py-1 uppercase tracking-wide">
+                                Bold & Condensed Style<br />
+                                <span className="text-base opacity-75 normal-case tracking-normal font-sans">適合具衝擊力的標題。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">4. 英文 (Anton)</span>
+                            <div className="font-anton text-content-main text-2xl border-l-4 border-primary pl-3 py-1 tracking-wider">
+                                IMPACTFUL HEADLINE<br />
+                                <span className="text-base opacity-75 font-sans tracking-normal">傳統廣告風格。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">5. 英文 (Barlow Condensed)</span>
+                            <div className="font-barlow text-content-main text-xl border-l-4 border-primary pl-3 py-1 font-medium">
+                                Clean and low-contrast geometric.<br />
+                                <span className="text-base opacity-75">具工業風與機構感的視覺效果。</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <span className="text-sm text-gray-400 uppercase tracking-wider font-bold">6. 英文 (Alegreya Sans)</span>
+                            <div className="font-alegreya text-content-main text-xl border-l-4 border-primary pl-3 py-1">
+                                A humanist sans-serif with a calligraphic feel.<br />
+                                <span className="text-base opacity-75">介於無襯線字體與襯線字體之間，專為長文閱讀與文學設計。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* 3. 卡片展示區塊 */}
             <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">卡片效果 (Card Effects)</h2>
                 <div className="grid md:grid-cols-3 gap-8">
 
+                    {/* 範例: 向上浮動效果 (Lift) */}
                     <Card hoverEffect="lift">
                         <CardHeader className="flex items-center gap-3">
                             <div className="bg-blue-100 p-3 rounded-lg text-primary">
@@ -73,6 +164,7 @@ export default function ComponentShowcase() {
                         </CardContent>
                     </Card>
 
+                    {/* 範例: 微幅縮放效果 (Scale) */}
                     <Card hoverEffect="scale">
                         <CardHeader className="flex items-center gap-3">
                             <div className="bg-purple-100 p-3 rounded-lg text-purple-600">
@@ -85,6 +177,7 @@ export default function ComponentShowcase() {
                         </CardContent>
                     </Card>
 
+                    {/* 範例: 發光效果 (Glow) */}
                     <Card hoverEffect="glow">
                         <CardHeader className="flex items-center gap-3">
                             <div className="bg-teal-100 p-3 rounded-lg text-teal-600">
