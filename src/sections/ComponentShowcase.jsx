@@ -190,6 +190,19 @@ export default function ComponentShowcase() {
                         </CardContent>
                     </Card>
 
+                    {/* 範例: 翻轉填充效果 (Flip Up) */}
+                    <Card hoverEffect="flip-up">
+                        <CardHeader className="flex items-center gap-3">
+                            <div className="bg-orange-100 p-3 rounded-lg text-orange-600">
+                                <Send className="w-6 h-6" />
+                            </div>
+                            <CardTitle>翻轉填充 (Flip Up)</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            Hover 時背景色從底部向上填充，文字反白，模仿經典按鈕互動，提供強烈的視覺回饋。
+                        </CardContent>
+                    </Card>
+
                 </div>
             </div>
 
