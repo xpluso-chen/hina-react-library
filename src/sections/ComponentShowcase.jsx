@@ -221,6 +221,86 @@ export default function ComponentShowcase() {
                     </div>
                 </div>
             </div>
+
+            {/* 5. 彈窗樣式 */}
+            <div className="space-y-6">
+                <h2 className="text-3xl font-bold text-content-main border-l-4 border-primary pl-4">彈窗樣式</h2>
+                <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 grid md:grid-cols-2 gap-8">
+
+                    {/* Style A: 無右上角叉叉 */}
+                    <div className="space-y-6">
+                        <h3 className="font-semibold text-gray-400 uppercase tracking-wider border-b pb-2">樣式 A (無叉叉)</h3>
+
+                        {/* A-1: 標題 + 內文 + 確認按鈕 */}
+                        <div className="space-y-2">
+                            <span className="text-xs text-primary font-medium block mb-1">A-1: 標題 + 內文 + 確認按鈕(基礎確認)</span>
+                            <div className="bg-gray-50 p-6 rounded-xl flex justify-center items-center">
+                                <Dialog
+                                    title="確認刪除?"
+                                    footer={
+                                        <Button size="sm" className="bg-red-500 hover:bg-red-600 border-red-500 text-white">確認刪除</Button>
+                                    }
+                                >
+                                    此動作無法復原，請確認是否繼續。
+                                </Dialog>
+                            </div>
+                        </div>
+
+                        {/* A-2: 標題 + 內文 + 確認按鈕 + 取消按鈕 */}
+                        <div className="space-y-2">
+                            <span className="text-xs text-primary font-medium block mb-1">A-2: 標題 + 內文 + 確認按鈕 + 取消按鈕(雙向確認)</span>
+                            <div className="bg-gray-50 p-6 rounded-xl flex justify-center items-center">
+                                <Dialog
+                                    title="尚未儲存"
+                                    footer={
+                                        <>
+                                            <Button variant="ghost" size="sm" className="text-gray-500 bg-gray-100 hover:bg-gray-200">取消</Button>
+                                            <Button size="sm">確認離開</Button>
+                                        </>
+                                    }
+                                >
+                                    您的變更尚未儲存，確定要離開嗎？
+                                </Dialog>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Style B: 有右上角叉叉 */}
+                    <div className="space-y-6">
+                        <h3 className="font-semibold text-gray-400 uppercase tracking-wider border-b pb-2">樣式 B (含叉叉)</h3>
+
+                        {/* B-1: 標題 + 內文 */}
+                        <div className="space-y-2">
+                            <span className="text-xs text-primary font-medium block mb-1">B-1: 標題 + 內文(僅公告)</span>
+                            <div className="bg-gray-50 p-6 rounded-xl flex justify-center items-center">
+                                <Dialog
+                                    title="公告通知"
+                                    showCloseButton
+                                >
+                                    系統將於今晚 12:00 進行維護，屆時將無法登入系統。
+                                </Dialog>
+                            </div>
+                        </div>
+
+                        {/* B-2: 標題 + 內文 + 確認按鈕 */}
+                        <div className="space-y-2">
+                            <span className="text-xs text-primary font-medium block mb-1">B-2: 標題 + 內文 + 確認按鈕(公告並確認)</span>
+                            <div className="bg-gray-50 p-6 rounded-xl flex justify-center items-center">
+                                <Dialog
+                                    title="權限申請"
+                                    showCloseButton
+                                    footer={
+                                        <Button size="sm">知道了</Button>
+                                    }
+                                >
+                                    您已成功送出權限申請，請等待管理員審核。
+                                </Dialog>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
     );
 }
